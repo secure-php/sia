@@ -1,0 +1,61 @@
+#cloud-config
+autoinstall:
+  version: 1
+  identity:
+
+  storage:
+    layout:
+      name: direct
+
+    swap:
+      size: 0
+
+  user-data:
+    hostname: s2e
+    disable_root: false
+    users:
+      - name: s2e
+        # printf 's2e' | openssl passwd -6 -salt 'FhcddHFVZ7ABA4Gi' -stdin
+        passwd: "$6$FhcddHFVZ7ABA4Gi$/pQkv2jLKFMQNuq.hXeTrR8L.RXE4oc5i4StDAcmzN/H6tRPStmxADrmQi6Ya1gA1.lBUtieq9OrOgOYlklEc1"
+        shell: /bin/bash
+        groups: [tty, dialout]
+
+
+  packages:
+    - openssh-server
+    - build-essential
+    - python3-dev
+    - python3-setuptools
+    - gcc
+    - g++
+    - libc-dbg
+    - gdb
+    - valgrind
+    - strace
+    - git
+    - libdw-dev
+    - elfutils
+    - gettext
+    - libelf1
+    - tmux
+    - php
+    - php-dev
+    - libonig-dev
+    - libicu-dev
+    - libzip-dev
+    - libssl-dev
+    - mysql-server
+
+
+  late-commands:
+    #- echo "deb http://cz.archive.ubuntu.com/ubuntu lunar main " > /etc/apt/sources.list
+    #- apt update
+    #- apt install libicu-dev
+    # - systemctl disable mysql
+    - echo 's2e ALL=(ALL) NOPASSWD:ALL' > /target/etc/sudoers.d/s2e
+    - sed -ie 's/GRUB_CMDLINE_LINUX=.\*/GRUB_CMDLINE_LINUX="console=ttyS0,115200n8"/' /target/etc/default/grub
+    - sed -ie 's/GRUB_TIMEOUT=.*/GRUB_TIMEOUT=4/' /target/etc/default/grub
+    - sed -ie 's/#GRUB_DISABLE_LINUX_UUID=.*/GRUB_DISABLE_LINUX_UUID=true/' /target/etc/default/grub
+    - curtin in-target --target /target -- update-grub2
+    - swapoff -a
+    - mkdir -p /target/home/s2e

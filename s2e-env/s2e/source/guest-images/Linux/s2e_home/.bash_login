@@ -1,0 +1,7 @@
+#!/bin/sh
+
+sudo chown -R s2e:s2e /home/s2e
+sudo usermod -a -G dialout s2e
+
+chmod +x ./launch.sh
+./launch.sh

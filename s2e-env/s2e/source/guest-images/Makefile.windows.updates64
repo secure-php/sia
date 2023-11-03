@@ -1,0 +1,239 @@
+# Automatically generated
+# /home/vitaly/s2e/env/source/guest-images/scripts/download_windows_updates.py makefile-tgz -f /home/vitaly/s2e/env/source/guest-images/Windows/Windows_7_SP1_Updates_x64.ul -o $(WINDOWS_APPS_DIR)/win7_updates/x64 -v WINDOWS_UPDATES
+
+# Internet Explorer 11 English for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/15_2013-11-06_IE11-Windows6.1-x64-en-us.exe: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2446710 - Security update for .NET Framework 3.5.1 on Windows 7 SP1
+$(WINDOWS_APPS_DIR)/win7_updates/x64/06_2011-12-04_Windows6.1-KB2446710-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2478662 - Security update for .NET Framework 3.5.1 on Windows 7 SP1
+$(WINDOWS_APPS_DIR)/win7_updates/x64/06_2011-06-14_Windows6.1-KB2478662-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2545698 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2011-09-11_Windows6.1-KB2545698-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2547666 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2011-06-27_Windows6.1-KB2547666-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2574819 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/20_2013-09-10_Windows6.1-KB2574819-v2-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2592687 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/20_2013-09-10_Windows6.1-KB2592687-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2603229 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2011-10-26_Windows6.1-KB2603229-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2667402 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2012-10-09_Windows6.1-KB2667402-v2-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2670838 - Platform update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2013-02-26_Windows6.1-KB2670838-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2676562 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2014-09-02_Windows6.1-KB2676562-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2685811 - Kernel-Mode Driver Framework version 1.11 update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2012-11-13_Windows6.1-KB2685811-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2685813 - User-Mode Driver Framework version 1.11 update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2012-11-13_Windows6.1-KB2685813-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2698365 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2012-07-10_Windows6.1-KB2698365-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2716513 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2012-11-13_Windows6.1-KB2716513-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2719033 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2012-11-13_Windows6.1-KB2719033-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2729094 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2012-10-09_Windows6.1-KB2729094-v2-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2732059 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2012-10-09_Windows6.1-KB2732059-v5-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2750841 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2012-11-13_Windows6.1-KB2750841-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2761217 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2012-11-13_Windows6.1-KB2761217-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2773072 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2013-01-08_Windows6.1-KB2773072-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2813347 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/20_2013-04-09_Windows6.1-KB2813347-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2830477 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/20_2014-02-12_Windows6.1-KB2830477-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2834140 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2013-09-20_Windows6.1-KB2834140-v2-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2862330 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2014-01-14_Windows6.1-KB2862330-v2-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2894844 - Update for Microsoft .NET Framework 3.5.1 for Windows 7 SP1
+$(WINDOWS_APPS_DIR)/win7_updates/x64/06_2014-09-10_Windows6.1-KB2894844-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2900986 - Cumulative Security Update for ActiveX Killbits for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2013-11-13_Windows6.1-KB2900986-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2912390 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2014-02-11_Windows6.1-KB2912390-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2919469 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2014-02-12_Windows6.1-KB2919469-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2923545 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/20_2014-02-24_Windows6.1-KB2923545-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2970228 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2014-09-02_Windows6.1-KB2970228-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB2984972 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2014-10-14_Windows6.1-KB2984972-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3004375 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2015-02-10_Windows6.1-KB3004375-v3-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3006137 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2015-02-24_Windows6.1-KB3006137-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3020369 - April 2015 servicing stack update for Windows 7 and Windows Server 2008 R2
+$(WINDOWS_APPS_DIR)/win7_updates/x64/01_2015-04-01_Windows6.1-KB3020369-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3020388 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2015-01-12_Windows6.1-KB3020388-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3020393 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2015-01-13_Windows6.1-KB3020393-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3035126 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2015-03-10_Windows6.1-KB3035126-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3046269 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2015-04-14_Windows6.1-KB3046269-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3059317 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2015-06-09_Windows6.1-KB3059317-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3064209 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2015-06-16_Windows6.1-KB3064209-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3075226 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/20_2015-08-10_Windows6.1-KB3075226-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3078601 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2015-08-11_Windows6.1-KB3078601-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3102429 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2016-01-16_Windows6.1-KB3102429-v2-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3110329 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2016-01-12_Windows6.1-KB3110329-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3118401 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2016-02-12_Windows6.1-KB3118401-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3123479 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2016-01-12_Windows6.1-KB3123479-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3125574 - Convenience rollup update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/01_2016-05-16_Windows6.1-KB3125574-v4-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3138612 - March 2016 Windows Update Client for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2016-03-02_Windows6.1-KB3138612-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3150220 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2016-05-10_Windows6.1-KB3150220-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3156016 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2016-05-10_Windows6.1-KB3156016-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3156019 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2016-05-10_Windows6.1-KB3156019-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3159398 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2016-06-14_Windows6.1-KB3159398-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3161102 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2016-07-25_Windows6.1-KB3161102-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3161949 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2016-06-14_Windows6.1-KB3161949-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3161958 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2016-06-14_Windows6.1-KB3161958-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3170455 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2016-07-12_Windows6.1-KB3170455-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3172605 - July 2016 update rollup for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2016-09-13_Windows6.1-KB3172605-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3179573 - August 2016 update rollup for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/10_2016-08-16_Windows6.1-KB3179573-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB3181988 - Security Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2016-09-20_Windows6.1-KB3181988-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# Cumulative Security Update Internet Explorer 11 English for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/15_2016-09-12_IE11-Windows6.1-KB3185319-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB4019990 - Update for Microsoft .NET Framework 3.5.1 for Windows 7 SP1
+$(WINDOWS_APPS_DIR)/win7_updates/x64/06_2017-09-12_Windows6.1-kb4019990-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB4049016 - November 2017 Security and Quality Rollup for .NET Framework 3.5.1 for Windows 7
+$(WINDOWS_APPS_DIR)/win7_updates/x64/06_2019-01-04_Windows6.1-kb4049016-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB4095874 - Update for Microsoft .NET Framework 3.5.1 for Windows 7 SP1
+$(WINDOWS_APPS_DIR)/win7_updates/x64/06_2018-05-17_Windows6.1-kb4095874-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# Cumulative Security Update Internet Explorer 11 English for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/15_2018-06-12_IE11-Windows6.1-KB4230450-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB4474419 - SHA-2 code signing support update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/02_2019-09-09_Windows6.1-KB4474419-v3-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB4480063 - January 2019 Security and Quality Rollup for .NET Framework 3.5.1 for Windows 7
+$(WINDOWS_APPS_DIR)/win7_updates/x64/06_2019-01-04_Windows6.1-kb4480063-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB4481252 - Microsoft Silverlight
+$(WINDOWS_APPS_DIR)/win7_updates/x64/30_2019-01-16_Silverlight-x64.exe: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# Cumulative Security Update Internet Explorer 11 English for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/15_2018-12-19_IE11-Windows6.1-KB4483187-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB4490628 - March 2019 servicing stack update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/01_2019-03-11_Windows6.1-KB4490628-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB4503548 - Microsoft .NET Framework 4.8 for Windows 7
+$(WINDOWS_APPS_DIR)/win7_updates/x64/30_2019-11-09_ndp48-x86-x64-allos-enu.exe: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB4507004 - July 2019 Security and Quality Rollup for .NET Framework 3.5.1 for Windows 7
+$(WINDOWS_APPS_DIR)/win7_updates/x64/06_2019-07-08_Windows6.1-kb4507004-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# Cumulative Security Update Internet Explorer 11 English for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/15_2019-08-10_IE11-Windows6.1-KB4511872-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB4532941 - January 2020 Security and Quality Rollup for .NET Framework 4.8 for Windows 7
+$(WINDOWS_APPS_DIR)/win7_updates/x64/30_2020-01-09_NDP48-kb4532941-x64.exe: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB4532945 - January 2020 Security and Quality Rollup for .NET Framework 3.5.1 for Windows 7
+$(WINDOWS_APPS_DIR)/win7_updates/x64/06_2020-01-09_Windows6.1-KB4532945-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB4534310 - January 2020 Security Monthly Quality Rollup for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/05_2020-01-14_Windows6.1-KB4534310-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB4536952 - January 2020 servicing stack update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/01_2020-01-13_Windows6.1-KB4536952-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+# KB4580970 - Update for Windows 7 SP1 x64
+$(WINDOWS_APPS_DIR)/win7_updates/x64/01_2020-10-09_Windows6.1-KB4580970-x64.msu: $(WINDOWS_APPS_DIR)/win7_updates/x64/stamp
+
+WINDOWS_UPDATES := $(WINDOWS_UPDATES) $(WINDOWS_APPS_DIR)/win7_updates/x64/15_2013-11-06_IE11-Windows6.1-x64-en-us.exe $(WINDOWS_APPS_DIR)/win7_updates/x64/06_2011-12-04_Windows6.1-KB2446710-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/06_2011-06-14_Windows6.1-KB2478662-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2011-09-11_Windows6.1-KB2545698-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2011-06-27_Windows6.1-KB2547666-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/20_2013-09-10_Windows6.1-KB2574819-v2-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/20_2013-09-10_Windows6.1-KB2592687-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2011-10-26_Windows6.1-KB2603229-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2012-10-09_Windows6.1-KB2667402-v2-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2013-02-26_Windows6.1-KB2670838-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2014-09-02_Windows6.1-KB2676562-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2012-11-13_Windows6.1-KB2685811-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2012-11-13_Windows6.1-KB2685813-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2012-07-10_Windows6.1-KB2698365-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2012-11-13_Windows6.1-KB2716513-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2012-11-13_Windows6.1-KB2719033-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2012-10-09_Windows6.1-KB2729094-v2-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2012-10-09_Windows6.1-KB2732059-v5-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2012-11-13_Windows6.1-KB2750841-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2012-11-13_Windows6.1-KB2761217-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2013-01-08_Windows6.1-KB2773072-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/20_2013-04-09_Windows6.1-KB2813347-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/20_2014-02-12_Windows6.1-KB2830477-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2013-09-20_Windows6.1-KB2834140-v2-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2014-01-14_Windows6.1-KB2862330-v2-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/06_2014-09-10_Windows6.1-KB2894844-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2013-11-13_Windows6.1-KB2900986-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2014-02-11_Windows6.1-KB2912390-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2014-02-12_Windows6.1-KB2919469-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/20_2014-02-24_Windows6.1-KB2923545-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2014-09-02_Windows6.1-KB2970228-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2014-10-14_Windows6.1-KB2984972-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2015-02-10_Windows6.1-KB3004375-v3-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2015-02-24_Windows6.1-KB3006137-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/01_2015-04-01_Windows6.1-KB3020369-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2015-01-12_Windows6.1-KB3020388-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2015-01-13_Windows6.1-KB3020393-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2015-03-10_Windows6.1-KB3035126-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2015-04-14_Windows6.1-KB3046269-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2015-06-09_Windows6.1-KB3059317-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2015-06-16_Windows6.1-KB3064209-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/20_2015-08-10_Windows6.1-KB3075226-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2015-08-11_Windows6.1-KB3078601-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2016-01-16_Windows6.1-KB3102429-v2-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2016-01-12_Windows6.1-KB3110329-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2016-02-12_Windows6.1-KB3118401-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2016-01-12_Windows6.1-KB3123479-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/01_2016-05-16_Windows6.1-KB3125574-v4-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2016-03-02_Windows6.1-KB3138612-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2016-05-10_Windows6.1-KB3150220-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2016-05-10_Windows6.1-KB3156016-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2016-05-10_Windows6.1-KB3156019-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2016-06-14_Windows6.1-KB3159398-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2016-07-25_Windows6.1-KB3161102-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2016-06-14_Windows6.1-KB3161949-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2016-06-14_Windows6.1-KB3161958-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2016-07-12_Windows6.1-KB3170455-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2016-09-13_Windows6.1-KB3172605-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/10_2016-08-16_Windows6.1-KB3179573-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2016-09-20_Windows6.1-KB3181988-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/15_2016-09-12_IE11-Windows6.1-KB3185319-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/06_2017-09-12_Windows6.1-kb4019990-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/06_2019-01-04_Windows6.1-kb4049016-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/06_2018-05-17_Windows6.1-kb4095874-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/15_2018-06-12_IE11-Windows6.1-KB4230450-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/02_2019-09-09_Windows6.1-KB4474419-v3-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/06_2019-01-04_Windows6.1-kb4480063-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/30_2019-01-16_Silverlight-x64.exe $(WINDOWS_APPS_DIR)/win7_updates/x64/15_2018-12-19_IE11-Windows6.1-KB4483187-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/01_2019-03-11_Windows6.1-KB4490628-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/30_2019-11-09_ndp48-x86-x64-allos-enu.exe $(WINDOWS_APPS_DIR)/win7_updates/x64/06_2019-07-08_Windows6.1-kb4507004-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/15_2019-08-10_IE11-Windows6.1-KB4511872-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/30_2020-01-09_NDP48-kb4532941-x64.exe $(WINDOWS_APPS_DIR)/win7_updates/x64/06_2020-01-09_Windows6.1-KB4532945-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/05_2020-01-14_Windows6.1-KB4534310-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/01_2020-01-13_Windows6.1-KB4536952-x64.msu $(WINDOWS_APPS_DIR)/win7_updates/x64/01_2020-10-09_Windows6.1-KB4580970-x64.msu
+

@@ -1,0 +1,16 @@
+name: Check code style
+on: [pull_request]
+jobs:
+  clang-format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Run clang-format
+        run: |
+           set -x
+           wget https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.0/clang+llvm-14.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+           tar -xmf clang+llvm-14.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+           mv clang+llvm-14.0.0-x86_64-linux-gnu-ubuntu-18.04 ../llvm
+           CLANG_FORMAT=../llvm/bin/clang-format ./test-clang-format.sh
+      - run: echo "🍏 This job's status is ${{ job.status }}."

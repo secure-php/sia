@@ -1,0 +1,15 @@
+test:
+    description: "Checks that Linux and Windows PoV generation works"
+    options:
+        tools:
+            - "pov"
+
+    target_arguments:
+        - ["@@"]
+
+    targets:
+        - windows64-pov-demo0.exe
+        - windows32-pov-demo0.exe
+        - linux32-pov-demo0
+        # Skip 64-bit Linux, it has forced concretizations
+        # - linux64-pov-demo0

@@ -1,0 +1,96 @@
+# Copyright (c) 2017-2020, Cyberhaven
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+# Download 3rd party tools to install in the guest
+
+# These apps are hosted in github
+WIN_APPS_REPO := 7z.exe 7z.dll devcon.exe ImDiskTk.exe ImDiskTk-x64.exe libeay32.dll msys.7z ssleay32.dll \
+ timeout.exe resolution.exe windbg-x64.msi windbg-x86.msi
+
+
+# These apps are hosted on 3rd party servers
+WIN_APPS := \
+  python-2.7.13.msi python-2.7.13.amd64.msi \
+  dotNetFx40_Full_x86_x64.exe \
+  vs2015_vcredist_x86.exe vs2015_vcredist_x64.exe vs2013_vcredist_x86.exe vs2013_vcredist_x64.exe \
+  vs2008_vcredist_x86.exe vs2008_vcredist_x64.exe sysinternals.zip \
+  vs2015-2019_vcredist_x86.exe vs2015-2019_vcredist_x64.exe \
+  winxp-updates-x86-enu.exe Win7AndW2K8R2-KB3191566-x64.zip Win7-KB3191566-x86.zip \
+  odt.exe \
+  $(WIN_APPS_REPO)
+
+WIN_APPS_PATH := $(addprefix $(WINDOWS_APPS_DIR)/,$(WIN_APPS))
+WIN_APPS_REPO_PATH := $(addprefix $(WINDOWS_APPS_DIR)/,$(WIN_APPS_REPO))
+
+GITHUB_ROOT=https://github.com/S2E/guest-images/releases/download/v2.0.0
+
+$(WINDOWS_APPS_DIR)/dotNetFx40_Full_x86_x64.exe: | $(WINDOWS_APPS_DIR)
+	$(WGET) $@ $(GITHUB_ROOT)/dotNetFx40_Full_x86_x64.exe
+
+# 2008 version is required for python
+$(WINDOWS_APPS_DIR)/vs2008_vcredist_x64.exe: | $(WINDOWS_APPS_DIR)
+	$(WGET) $@ $(GITHUB_ROOT)/vs2008_vcredist_x64.exe
+
+$(WINDOWS_APPS_DIR)/vs2008_vcredist_x86.exe: | $(WINDOWS_APPS_DIR)
+	$(WGET) $@ $(GITHUB_ROOT)/vs2008_vcredist_x86.exe
+
+$(WINDOWS_APPS_DIR)/vs2013_vcredist_x64.exe: | $(WINDOWS_APPS_DIR)
+	$(WGET) $@ $(GITHUB_ROOT)/vs2013_vcredist_x64.exe
+
+$(WINDOWS_APPS_DIR)/vs2013_vcredist_x86.exe: | $(WINDOWS_APPS_DIR)
+	$(WGET) $@ $(GITHUB_ROOT)/vs2013_vcredist_x86.exe
+
+$(WINDOWS_APPS_DIR)/vs2015-2019_vcredist_x86.exe: | $(WINDOWS_APPS_DIR)
+	$(WGET) $@ $(GITHUB_ROOT)/vs2015-2019_vcredist_x86.exe
+
+$(WINDOWS_APPS_DIR)/vs2015-2019_vcredist_x64.exe: | $(WINDOWS_APPS_DIR)
+	$(WGET) $@ $(GITHUB_ROOT)/vs2015_vcredist_x64.exe
+
+$(WINDOWS_APPS_DIR)/vs2015_vcredist_x64.exe: | $(WINDOWS_APPS_DIR)
+	$(WGET) $@ $(GITHUB_ROOT)/vs2015_vcredist_x64.exe
+
+$(WINDOWS_APPS_DIR)/vs2015_vcredist_x86.exe: | $(WINDOWS_APPS_DIR)
+	$(WGET) $@ $(GITHUB_ROOT)/vs2015_vcredist_x86.exe
+
+$(WINDOWS_APPS_DIR)/python-2.7.13.amd64.msi: | $(WINDOWS_APPS_DIR)
+	$(WGET) $@ https://www.python.org/ftp/python/2.7.13/python-2.7.13.amd64.msi
+
+$(WINDOWS_APPS_DIR)/python-2.7.13.msi: | $(WINDOWS_APPS_DIR)
+	$(WGET) $@ https://www.python.org/ftp/python/2.7.13/python-2.7.13.msi
+
+$(WINDOWS_APPS_DIR)/sysinternals.zip: | $(WINDOWS_APPS_DIR)
+	$(WGET) $@ https://download.sysinternals.com/files/SysinternalsSuite.zip
+
+# officedeploymenttool_12624-20320.exe
+$(WINDOWS_APPS_DIR)/odt.exe: | $(WINDOWS_APPS_DIR)
+	$(WGET) $@ $(GITHUB_ROOT)/odt.exe
+
+$(WINDOWS_APPS_DIR)/winxp-updates-x86-enu.exe: | $(WINDOWS_APPS_DIR)
+	$(WGET) $@ $(GITHUB_ROOT)/winxp-updates-x86-enu.exe
+
+$(WINDOWS_APPS_DIR)/Win7AndW2K8R2-KB3191566-x64.zip: | $(WINDOWS_APPS_DIR)
+	$(WGET) $@ $(GITHUB_ROOT)/Win7AndW2K8R2-KB3191566-x64.zip
+
+$(WINDOWS_APPS_DIR)/Win7-KB3191566-x86.zip: | $(WINDOWS_APPS_DIR)
+	$(WGET) $@ $(GITHUB_ROOT)/Win7-KB3191566-x86.zip
+
+
+$(WIN_APPS_REPO_PATH): | $(WINDOWS_APPS_DIR)
+	$(WGET) $@ $(GUEST_IMAGES_RELEASE_URL)/$(notdir $@)

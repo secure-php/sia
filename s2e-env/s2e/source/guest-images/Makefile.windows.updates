@@ -1,0 +1,43 @@
+# Copyright (c) 2021, Vitaly Chipounov
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+###############################################################################
+
+$(WINDOWS_APPS_DIR)/win7_updates:
+	mkdir -p $@
+
+$(WINDOWS_APPS_DIR)/win7_updates/x86.tar.gz: | $(WINDOWS_APPS_DIR)/win7_updates
+	$(WGET) $@ https://github.com/S2E/guest-images/releases/download/v2.0.0/win7_updates_x86.tar.gz
+
+$(WINDOWS_APPS_DIR)/win7_updates/x86/stamp: $(WINDOWS_APPS_DIR)/win7_updates/x86.tar.gz
+	echo Extracting $<
+	tar -xzvf $< -C $(WINDOWS_APPS_DIR)/win7_updates
+	touch $@
+
+$(WINDOWS_APPS_DIR)/win7_updates/x64.tar.gz: | $(WINDOWS_APPS_DIR)/win7_updates
+	$(WGET) $@ https://github.com/S2E/guest-images/releases/download/v2.0.0/win7_updates_x64.tar.gz
+
+$(WINDOWS_APPS_DIR)/win7_updates/x64/stamp: $(WINDOWS_APPS_DIR)/win7_updates/x64.tar.gz
+	echo Extracting $<
+	tar -xzvf $< -C $(WINDOWS_APPS_DIR)/win7_updates
+	touch $@
+
+include $(SRC)/Makefile.windows.updates32
+include $(SRC)/Makefile.windows.updates64
