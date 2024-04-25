@@ -21,6 +21,7 @@ More technical details can be found in our SP24 paper.
 
 SymPHP generally follows the [standard instructions](https://s2e.systems/docs/s2e-env.html#id2) for building S2E.
 Below are some key steps.
+
 ```sh
 # install the dependencies in https://github.com/secureweb/s2e/blob/master/Dockerfile
 
@@ -40,7 +41,7 @@ s2e build
 s2e image_build ubuntu-22.04-x86_64
 ```
 
-### Build PHP interpreter
+### Build PHP Interpreter
 
 ```sh
 cd $SYMPHP/php-src
@@ -60,7 +61,7 @@ SymPHP leverages the Fault Escalation technique (Trickel et al. 2023) to issue a
 It is worth noting that directly signaling SIGSEGV could not be captured by S2E.
 Therefore, we insert a line of code to cause segfault.
 ```c
-# https://stackoverflow.com/a/2045478/10498659
+// https://stackoverflow.com/a/2045478/10498659
 *(int*)0 = 0;
 ```
 
@@ -75,6 +76,7 @@ make
 ## Use
 We illustrate the use cases of SymPHP using an example.
 The following PHP code snippet would trigger a segfault on the modified dash at the else branch.
+
 ```php
 # $SYMPHP/s2e-env/s2e/projects/test_files/test.php
 <?php
@@ -166,7 +168,7 @@ sudo cp dash /usr/bin/dash
 sh invokephp.sh
 ```
 
-### Check results
+### Check Results
 When a segmentation fault is triggered, the TestCaseGenerator plugin of S2E would generate a test case automatically.
 For example, in s2e-last/debug.txt.
 ```txt
@@ -176,11 +178,13 @@ For example, in s2e-last/debug.txt.
 15 [State 2] TestCaseGenerator: generating test case at address 0xffffffff8104bd6b
 15 [State 2] TestCaseGenerator:       v0__SYM_var1_0 = {0x68, 0x65, 0x6c, 0x6c}; (int32_t) 1819043176, (string) "hell"
 ```
-## Understanding Internals of SymPHP
+## Others 
 We explain how we modified the PHP interpreter [here](php-enhance.md).
 We hope these could help interested readers to extend the idea of SIA to other languages.
 
+Please open an issue if you have questions or encounter bugs?
+
 ## License
-SymPHP is under MIT License. 
+SymPHP is under Apache-2.0 license.
 SymPHP uses various libraries that may have their own licenses.
 Please refer to the LICENSE file in each directory or to the header of each source file.
