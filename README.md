@@ -10,7 +10,7 @@ More technical details can be found in our SP24 paper.
 @inproceedings{li2024symphp,
     title       = {Holistic Concolic Execution for Dynamic Web Applications via Symbolic Interpreter Analysis},
     author      = {Li, Penghui and Meng, Wei and Zhang, Mingxue and Wang, Chenlin and Luo, Changhua},
-    booktitle   = {Proceedings of the 45h IEEE Symposium on Security and Privacy (Oakland)},
+    booktitle   = {Proceedings of the 45h IEEE Symposium on Security and Privacy (S&P)},
     month       = may,
     year        = 2024
 }
@@ -55,17 +55,19 @@ make
 ```
 
 ### Build Bug Checker
-S2E captures several types of errors (e.g., segfault) during the analysis.
-To enable S2E to report web vulnerabilities, a straightforward way is to issue a segfault.
-SymPHP leverages the Fault Escalation technique (Trickel et al. 2023) to issue a segfault for syntax parsing errors in the sinks.
-It is worth noting that directly signaling SIGSEGV could not be captured by S2E.
-Therefore, we insert a line of code to cause segfault.
+S2E can capture several types of errors during the analysis.
+Following the idea of Fault Escalation (Trickel et al. 2023), SymPHP issues a segfault for syntax parsing errors in sinks.
+It is worth noting that directly signaling SIGSEGV would not work due to the ways S2E captures errors.
+Therefore, we insert the following code snippet to intentionally trigger segfault on syntax parsing errors.
+We modified the [dash](https://github.com/nyuichi/dash) for command injection vulnerabilities.
+
 ```c
 // https://stackoverflow.com/a/2045478/10498659
 *(int*)0 = 0;
 ```
 
-We modified the [dash](https://github.com/nyuichi/dash) to report command injection vulnerabilities.
+Build dash:
+
 ```sh
 cd $SYMPHP/dash
 sh autogen.sh
@@ -85,7 +87,7 @@ if(isset($_GET['var1'])) {
 	if($var1 == '2022'){
 		echo "branch one \n";
 	}
-	elseif($var1 . "world" == "hellworld") {
+	elseif($var1 . "o" == "hello") {
 		echo "branch two \n";
 		
 		// trigger segfault acccording to Fault Escalation
@@ -106,8 +108,7 @@ s2e new_project -i ubuntu-22.04-x86_64 $SYMPHP/php-src/sapi/cgi/php-cgi
 cd projects/php-cgi
 ```
 ### Config S2E Project
-Config S2E by editing s2e-config.lua. 
-In particular, InterpreterMonitor plugin should be enabled; WEBPC should be enabled for CUPASearcher.
+In s2e-config.lua, InterpreterMonitor plugin should be enabled; WEBPC should be enabled for CUPASearcher.
 A reference configuration file (with hardcoded paths) can be found in test_files/s2e-config.lua.
 TestCaseGenerator plugin should be set to generate test cases on segfaults.
 
@@ -171,6 +172,7 @@ sh invokephp.sh
 ### Check Results
 When a segmentation fault is triggered, the TestCaseGenerator plugin of S2E would generate a test case automatically.
 For example, in s2e-last/debug.txt.
+
 ```txt
 15 [State 2] TestCaseGenerator: generating test case at address 0xffffffff8104bd6b
 15 [State 2] LinuxMonitor: Terminating state: received segfault
@@ -182,7 +184,7 @@ For example, in s2e-last/debug.txt.
 We explain how we modified the PHP interpreter [here](php-enhance.md).
 We hope these could help interested readers to extend the idea of SIA to other languages.
 
-Please open an issue if you have questions or encounter bugs?
+Please open an issue if you have questions or encounter bugs.
 
 ## License
 SymPHP is under Apache-2.0 license.
