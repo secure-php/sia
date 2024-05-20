@@ -2,7 +2,7 @@
 SymPHP is a concolic execution engine for PHP-based web applications, leveraging the idea of Symbolic Interpreter Analysis (SIA).
 It symbolically analyzes the language interpreter to (indirectly) analyze the web application code.
 To perceive web application execution state, we modified [PHP interpreter](https://github.com/php/php-src) to expose WebPC.
-We also enhanced [S2E](https://github.com/S2E/s2e) to symbolically analyze the language interpreter with WebPC based state scheduling.
+We also enhanced [S2E](https://github.com/S2E/s2e) to symbolically analyze the language interpreter with WebPC-based state scheduling.
 SymPHP has been tested on Ubuntu 22.04.
 More technical details can be found in our SP24 paper.
 
@@ -58,7 +58,7 @@ make
 S2E can capture several types of errors during the analysis.
 Following the idea of Fault Escalation (Trickel et al. 2023), SymPHP issues a segfault for syntax parsing errors in sinks.
 It is worth noting that directly signaling SIGSEGV would not work due to the ways S2E captures errors.
-Therefore, we insert the following code snippet to intentionally trigger segfault on syntax parsing errors.
+Therefore, we insert the following code snippet to intentionally trigger segfaults on syntax parsing errors.
 We modified the [dash](https://github.com/nyuichi/dash) for command injection vulnerabilities.
 
 ```c
@@ -90,7 +90,7 @@ if(isset($_GET['var1'])) {
 	elseif($var1 . "o" == "hello") {
 		echo "branch two \n";
 		
-		// trigger segfault acccording to Fault Escalation
+		// trigger segfault according to Fault Escalation
 		system('ls ('); 
 	}
 }
@@ -107,10 +107,11 @@ source s2e_activate
 s2e new_project -i ubuntu-22.04-x86_64 $SYMPHP/php-src/sapi/cgi/php-cgi
 cd projects/php-cgi
 ```
+
 ### Config S2E Project
 In s2e-config.lua, InterpreterMonitor plugin should be enabled; WEBPC should be enabled for CUPASearcher.
 A reference configuration file (with hardcoded paths) can be found in test_files/s2e-config.lua.
-TestCaseGenerator plugin should be set to generate test cases on segfaults.
+TestCaseGenerator plugin should be enabled to generate test cases on segfaults.
 
 ```lua
 add_plugin("InterpreterMonitor")
@@ -140,7 +141,7 @@ pluginsConfig.TestCaseGenerator = {
 ```
 
 ### Run
-Copy other required files, including modified dash.
+Copy other required files, including the modified dash.
 
 ```sh
 # copy necessary binaries
@@ -180,13 +181,14 @@ For example, in s2e-last/debug.txt.
 15 [State 2] TestCaseGenerator: generating test case at address 0xffffffff8104bd6b
 15 [State 2] TestCaseGenerator:       v0__SYM_var1_0 = {0x68, 0x65, 0x6c, 0x6c}; (int32_t) 1819043176, (string) "hell"
 ```
-## Others 
+## How to Enhance Interpreter?
 We explain how we modified the PHP interpreter [here](php-enhance.md).
-We hope these could help interested readers to extend the idea of SIA to other languages.
+We hope this could help interested readers to extend the idea of SIA to other languages/interpreters.
 
+## Report a Bug?
 Please open an issue if you have questions or encounter bugs.
 
 ## License
 SymPHP is under Apache-2.0 license.
-SymPHP uses various libraries that may have their own licenses.
+SymPHP uses various libraries/tools that may have their own licenses.
 Please refer to the LICENSE file in each directory or to the header of each source file.
