@@ -10,7 +10,7 @@ More technical details can be found in our SP24 paper.
 @inproceedings{li2024symphp,
     title       = {Holistic Concolic Execution for Dynamic Web Applications via Symbolic Interpreter Analysis},
     author      = {Li, Penghui and Meng, Wei and Zhang, Mingxue and Wang, Chenlin and Luo, Changhua},
-    booktitle   = {Proceedings of the 45th IEEE Symposium on Security and Privacy (S&P)},
+    booktitle   = {Proceedings of the 45th IEEE Symposium on Security and Privacy},
     month       = may,
     year        = 2024
 }
