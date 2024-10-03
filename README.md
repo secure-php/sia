@@ -16,6 +16,18 @@ More technical details can be found in our SP24 paper.
 }
 ```
 
+## Code Structure
+```txt
+.
+|-- LICENSE
+|-- README.md
+|-- dash/
+|-- php-enhance.md
+|-- php-src/
+|-- projects/
+`-- s2e-env/
+```
+
 ## Installation
 ### Build S2E
 
@@ -23,18 +35,17 @@ SymPHP generally follows the [standard instructions](https://s2e.systems/docs/s2
 Below are some key steps.
 
 ```sh
-# install the dependencies in https://github.com/secureweb/s2e/blob/master/Dockerfile
-
 # use s2e-env
-cd $SYMPHP/s2e-env
+cd symphp
+git clone https://github.com/secureweb/s2e-env
+cd s2e-env
 python3 -m venv venv
 . venv/bin/activate
-pip install --upgrade pip
 pip install .
 
 # build S2E
-cd $SYMPHP/s2e-env/s2e
-source s2e_activate 
+s2e init `pwd`/s2e
+source s2e/s2e_activate 
 s2e build
 
 # build an ubuntu-22.04-x86_64 VM image for running PHP interpreter in
@@ -44,12 +55,14 @@ s2e image_build ubuntu-22.04-x86_64
 ### Build PHP Interpreter
 
 ```sh
-cd $SYMPHP/php-src
+cd symphp/php-src
 ./buildconf --force 
 
 # this builds the PHP binaries sapi/cli/php and sapi/cgi/php-cgi
 # one can enable other optional configurations, e.g., --with-mysql
 # https://www.php.net/manual/en/configure.about.php
+# *make sure the header files could be found and correctly included*
+# if you follow the code structure here, the following should be fine
 EXTRA_INCLUDES="-I ../s2e-env/s2e/source/s2e/guest/common/include" ./configure
 make
 ```
@@ -69,7 +82,7 @@ We modified the [dash](https://github.com/nyuichi/dash) for command injection vu
 Build dash:
 
 ```sh
-cd $SYMPHP/dash
+cd symphp/dash
 sh autogen.sh
 ./configure
 make
@@ -80,7 +93,7 @@ We illustrate the use cases of SymPHP using an example.
 The following PHP code snippet would trigger a segfault on the modified dash at the else branch.
 
 ```php
-# $SYMPHP/s2e-env/s2e/projects/test_files/test.php
+# symphp/projects/test_files/test.php
 <?php
 if(isset($_GET['var1'])) {
     $var1 = $_GET['var1'];
@@ -99,18 +112,18 @@ if(isset($_GET['var1'])) {
 ### Start a S2E Project
 Create a new project for the binary php-cgi.
 ```sh
-cd $SYMPHP/s2e-env 
+cd symphp/s2e-env 
 . venv/bin/activate
-cd $SYMPHP/s2e-env/s2e
+cd symphp/s2e-env/s2e
 source s2e_activate
 
-s2e new_project -i ubuntu-22.04-x86_64 $SYMPHP/php-src/sapi/cgi/php-cgi
+s2e new_project -i ubuntu-22.04-x86_64 symphp/php-src/sapi/cgi/php-cgi
 cd projects/php-cgi
 ```
 
 ### Config S2E Project
 In s2e-config.lua, InterpreterMonitor plugin should be enabled; WEBPC should be enabled for CUPASearcher.
-A reference configuration file (with hardcoded paths) can be found in test_files/s2e-config.lua.
+A reference configuration file (with hardcoded paths) can be found in projects/test_files/s2e-config.lua.
 TestCaseGenerator plugin should be enabled to generate test cases on segfaults.
 
 ```lua
@@ -145,10 +158,10 @@ Copy other required files, including the modified dash.
 
 ```sh
 # copy necessary binaries
-cp $SYMPHP/dash/src/dash dash
-cp $SYMPHP/s2e-env/s2e/projects/test_files/invokephp.sh .
-cp $SYMPHP/s2e-env/s2e/projects/test_files/test.php .
-cp $SYMPHP/s2e-env/s2e/projects/test_files/bootstrap.sh .
+cp symphp/dash/src/dash dash
+cp symphp/projects/test_files/invokephp.sh .
+cp symphp/projects/test_files/test.php .
+cp symphp/projects/test_files/bootstrap.sh .
 ```
 
 Start the analysis.

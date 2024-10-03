@@ -1,0 +1,57 @@
+{
+    "creation_time": "2024-04-19 12:47:19.176069",
+    "custom_lua_string": "",
+    "dynamically_linked": true,
+    "enable_cfi": false,
+    "enable_pov_generation": false,
+    "enable_tickler": false,
+    "guestfs_paths": [
+        "/home/phli/s2e-env/s2e/images/ubuntu-22.04-x86_64/guestfs"
+    ],
+    "has_guestfs": true,
+    "image": "/home/phli/s2e-env/s2e/images/ubuntu-22.04-x86_64",
+    "modelled_functions": [
+        "strcmp",
+        "memcpy",
+        "strncmp",
+        "memcmp",
+        "strcat",
+        "strcpy",
+        "strncat",
+        "strncpy",
+        "strlen"
+    ],
+    "modules": [
+        [
+            "php",
+            false
+        ]
+    ],
+    "processes": [
+        "php"
+    ],
+    "project_dir": "/home/phli/s2e-env/s2e/projects/php",
+    "project_name": "php",
+    "project_type": "linux",
+    "recipes_dir": "/home/phli/s2e-env/s2e/projects/php/recipes",
+    "seeds_dir": "/home/phli/s2e-env/s2e/projects/php/seeds",
+    "single_path": false,
+    "sym_args": [],
+    "target": {
+        "arch": "x86_64",
+        "aux_files": [],
+        "files": [
+            "../php"
+        ],
+        "name": "php",
+        "os": "linux",
+        "path": "../php"
+    },
+    "use_cupa": true,
+    "use_fault_injection": false,
+    "use_recipes": false,
+    "use_seeds": false,
+    "use_test_case_generator": true,
+    "warn_input_file": true,
+    "warn_seeds": true
+}
